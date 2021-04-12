@@ -1,0 +1,16 @@
+g++ -o parselas parselas.cpp 
+/tmp/ccN4ty9C.o: In function `main':
+parselas.cpp:(.text+0x25a): undefined reference to `cv::imread(cv::String const&, int)'
+/tmp/ccN4ty9C.o: In function `cv::String::String(char const*)':
+parselas.cpp:(.text._ZN2cv6StringC2EPKc[_ZN2cv6StringC5EPKc]+0x54): undefined reference to `cv::String::allocate(unsigned long)'
+/tmp/ccN4ty9C.o: In function `cv::String::~String()':
+parselas.cpp:(.text._ZN2cv6StringD2Ev[_ZN2cv6StringD5Ev]+0x14): undefined reference to `cv::String::deallocate()'
+/tmp/ccN4ty9C.o: In function `cv::String::operator=(cv::String const&)':
+parselas.cpp:(.text._ZN2cv6StringaSERKS0_[_ZN2cv6StringaSERKS0_]+0x28): undefined reference to `cv::String::deallocate()'
+/tmp/ccN4ty9C.o: In function `cv::Mat::~Mat()':
+parselas.cpp:(.text._ZN2cv3MatD2Ev[_ZN2cv3MatD5Ev]+0x39): undefined reference to `cv::fastFree(void*)'
+/tmp/ccN4ty9C.o: In function `cv::Mat::release()':
+parselas.cpp:(.text._ZN2cv3Mat7releaseEv[_ZN2cv3Mat7releaseEv]+0x4b): undefined reference to `cv::Mat::deallocate()'
+collect2: error: ld returned 1 exit status
+Makefile:9: recipe for target 'all' failed
+make: *** [all] Error 1
